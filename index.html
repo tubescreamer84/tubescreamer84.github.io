@@ -86,7 +86,7 @@
             <img src="img/macbook.png" class="easing">
         </div>
 
-        <div class="column column-50 pad5">
+        <div class="column column-40 responsive pad5">
            <div class="flex-wrap easing-faster">
                <div class="column">
             <h2 class="easing-faster">Jerome Tso Photography</h2>
@@ -122,16 +122,13 @@
 
 
 <!--CODE -->
-<div class="work row padding5 reverse">
+<div class="work row padding5">
 
 
 
-    <div class="column text-center">
-          <img src="img/smartphone2.png" class="easing">
-          
-    </div>
+    
 
-    <div class="column column-50 pad5">
+    <div class="column column-50 responsive pad5">
         <div class="flex-wrap row easing-faster">
       
             <div class="column dark">
@@ -154,6 +151,9 @@
             <a href="#" class="button details" id="csquare">Details</a>
         </div>
 
+        <div class="column text-center">
+        <img src="img/smartphone2.png" class="easing">
+    </div>
         </div> <!-- row -->
     </div>
 
@@ -181,17 +181,20 @@ END CODE
          
         <h1>Services</h1>
             <div class="container">
-                <div class="row">
-                    <div class="column">
-                    <ul>
+                <div class="row text-center">
+                    <div class="column"></div>
+                    <ul class="column column-25 text-left">
                         <li>Web Development</li>
                         <li>Graphic Design</li>
                         <li>Data Migration</li>
+                    </ul>
+                    <ul class="column column-25 text-left">
                         <li>Drupal</li>
                         <li>Wordpress</li>
                         <li>Wagtail CMS</li>
                     </ul>
-                    </div>
+                    
+                    <div class="column"></div>
                 </div>
             </div>
       </section>
@@ -204,7 +207,7 @@ END CODE
           <h1>Contact Us</h1>
           <div class="row clearfix margin5">
             <div class="column"></div>
-              <div class="column white-text contact-right">
+              <div class="column white-text contact-left">
                 <h3>Heck Design Studio</h3>
                 <p>Chehalis, WA<br>
                 Phone: 360.388.6428<br>
@@ -237,63 +240,7 @@ END CODE
               </button>
 
               </form>
-<!--
-              <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-      action="https://heckdesign.wufoo.com/forms/zd1c8hc01qwu5z/#public">
-  
-<ul>
-<li id="foli1" class="notranslate">
-<label class="desc" id="title1" for="Field1">
-Name
-<span id="req_1" class="req">*</span>
-</label>
-<div>
-<input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup=""       required />
-</div>
-</li>
-<li id="foli4" class="notranslate      ">
-<label class="desc" id="title4" for="Field4">
-Email
-<span id="req_4" class="req">*</span>
-</label>
-<div>
-<input id="Field4" name="Field4" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2"       required />
-</div>
-</li>
-<li id="foli5"
-class="notranslate"><label class="desc" id="title5" for="Field5">
-Message
-</label>
 
-<div>
-<textarea id="Field5"
-name="Field5"
-class="field textarea medium"
-spellcheck="true"
-rows="10" cols="50"
-
-tabindex="3"
-onkeyup=""
-       ></textarea>
-
-</div>
-</li> <li class="buttons ">
-<div>
-
-                    <input id="saveForm" name="saveForm" class="btTxt submit"
-    type="submit" value="Submit"
- /><a href="https://master.wufoo.com/forms/m7p0x3/def/field1=heckdesign.wufoo.com/forms/heck-design/"
-target="_blank" class="hide">Report Abuse</a>
-</div>
-</li>
-
-<li class="hide">
-<label for="comment">Do Not Fill This Out</label>
-<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="OGdFZc2MyJ1N08g25qDDOYvGGC38/tIAVG7FvIpu6Uc=" />
-</li>
-</ul>
-</form>-->
             </div>
           
              <div class="column"></div>
@@ -302,15 +249,12 @@ target="_blank" class="hide">Report Abuse</a>
       </div>
     
   
-       
-       
-    
-  
+
 
 <footer>
  
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+      <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
       
         <script src="js/main2.js"></script>
         <script src="js/formspree.js"></script>

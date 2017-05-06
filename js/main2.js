@@ -1,3 +1,4 @@
+var scrolled;
 $(document).ready(function(){
 
     $('.scroll-down').click(function(){
@@ -11,7 +12,8 @@ $(document).ready(function(){
        
         if($(this).attr('data-section') == 'home'){
             scrollMe('home');
-
+              $('li.active').removeClass('active');
+            $('.home').parent('li').addClass('active');
         }else{
             $('li.active').removeClass('active');
         $(this).parent('li').addClass('active');
@@ -31,16 +33,19 @@ $(document).ready(function(){
         $('header').toggleClass('show');
     });
 
-    // $('.over').addClass('fade');
+    $('.over').addClass('fade');
 
 });
 
 $(window).scroll(function(){
+    scrolled = jQuery(window).scrollTop();
    if($(window).scrollTop() > 0){
        $('body').addClass('scrolling');
    }else{
        $('body').removeClass('scrolling');
    }
+
+   parallax();
 
 });
 
@@ -59,4 +64,24 @@ function scrollMe(element){
    
 
 
+}
+
+
+function parallax(element){
+// 	window.requestAnimationFrame(function() {
+// 		var parH = winTop/3;
+// 		parH = parH.toFixed();
+// 		element.css('transform', 'translate3d(0, ' + parH +'px, 0)').addClass('parallax');
+// 	});
+// }
+
+  if(jQuery(window).width() > 768){
+		window.requestAnimationFrame(function() {
+			var scrolled2 = .75-(scrolled/500);
+			var parH = scrolled/3;
+			parH = parH.toFixed();
+			jQuery('.jumbotron').css('transform', 'translate3d(0, ' + parH +'px, 0)').addClass('parallax');
+			
+		});
+	}
 }
