@@ -1,6 +1,9 @@
 var scrolled;
 $(document).ready(function(){
 
+    if(! $('html').hasClass('cssvwunit')){
+        headerHeight();
+    }
     $('.scroll-down').click(function(){
         $('html, body').animate({
             scrollTop: $("#about").offset().top - $('header').outerHeight()
@@ -57,6 +60,17 @@ $(window).scroll(function(){
 
 });
 
+$(window).resize(function(){
+    if(! $('html').hasClass('cssvwunit')){
+        headerHeight();
+    }
+});
+
+$(window).load(function(){
+      if(! $('html').hasClass('cssvwunit')){
+        headerHeight();
+    }
+});
 
 function scrollMe(element){
     if(element == 'home'){
@@ -93,4 +107,8 @@ function parallax(element){
 			
 		});
 	}
+}
+
+function headerHeight(){
+    $('.jumbotron').height($(window).height());
 }

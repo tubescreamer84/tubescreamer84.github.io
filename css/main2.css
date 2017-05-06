@@ -19,16 +19,6 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.row .column.responsive{
-    /*flex: 0 0 100%;
-    max-width: 100%;*/
-        display: block;
-    flex: 1 1 auto;
-    margin-left: 0;
-    max-width: 100%;
-    width: 100%;
-}
-
 .back-color-dark{
     background:#383838;
 }
@@ -120,7 +110,12 @@ section.overlay{
     padding-bottom: 10%;
     padding: 2% 2% 10% 2%;
 }
-
+.padding4{
+   padding-top: 2%;
+    padding-bottom: 10%;
+    padding: 2% 2% 10% 4%;
+}
+ 
 .pad2{
     padding:2.5%;
 }
@@ -269,11 +264,14 @@ MENU
 JUMBOTRON
 *********************************************************************************/
 
+.cssvwunit .jumbotron{
+ min-height: 100vh;
+}
 .jumbotron {
     background: url(../img/jerome.jpg) center / cover;
     /* background: rgba(76, 166, 175, 0.92); */
     /* background: transparent; */
-    min-height: 799px;
+    min-height:300px;
     position: relative;
     display: flex;
 }
@@ -316,7 +314,14 @@ header ul li a {
     font-size: 1.25em;
     text-transform: uppercase;
     text-decoration: none;
+      transition: color .25s ease-in-out;
+   -moz-transition: color .25s ease-in-out;
+   -webkit-transition: color .25s ease-in-out;
 }
+
+ .scrolling header ul li a:hover{
+    color: #8c8c8c;
+ }
 
 .scrolling header ul li a{
    color: #606c76;
@@ -476,6 +481,9 @@ OUR WORK
     text-align: left;
 }
 
+  .phone img{
+        transform: rotate(7deg);
+    }
 
 /*********************************************************************************
 CONTACT
@@ -539,6 +547,10 @@ input[type='email']:focus, input[type='number']:focus, input[type='password']:fo
     .menu{
         left:initial;
         right:2rem;
+    }
+
+    .phone img{
+        transform: rotate(0deg);
     }
 }
 
@@ -628,7 +640,24 @@ color: #606c76;
 }
 
 @media screen and (max-width: 640px){
- .col-reverse{
+    header{
+        background: #fff !important;
+        border-bottom: 1px solid #ccc !important;
+    }
+
+    header .logo img.dark {
+        display: block !important;
+    }
+
+      header .logo img.light {
+        display: none !important;
+    }
+
+    .line{
+        background: #606c76 !important;
+    }
+  
+     .col-reverse{
         flex-direction: column-reverse;
     }
 
@@ -640,5 +669,27 @@ color: #606c76;
         margin-bottom:5%;
     }
 
+    .row .column.responsive{
+    /*flex: 0 0 100%;
+    max-width: 100%;*/
+        display: block;
+    flex: 1 1 auto;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+    }
+
+    .hideme{
+        display: none;
+    }
+
+    .row.no-column{
+        flex-direction: row;
+    }
+
+    .row.no-column .column.column-25{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
