@@ -177,9 +177,9 @@ header {
     height: 6rem;
     padding: 0 4rem;
     width:100%;
-     transition: background-color .25s ease-in-out;
-   -moz-transition: background-color .25s ease-in-out;
-   -webkit-transition: background-color .25s ease-in-out;
+     transition: all .25s ease-in-out;
+   -moz-transition: all 25s ease-in-out;
+   -webkit-transition: all .25s ease-in-out;
 }
 
 /*header.scrolling{
@@ -269,12 +269,27 @@ JUMBOTRON
 }
 .jumbotron {
     background: url(../img/jerome.jpg) center / cover;
+       background: url(../img/jerome2.jpg) center / cover;
     /* background: rgba(76, 166, 175, 0.92); */
     /* background: transparent; */
     min-height:300px;
     position: relative;
     display: flex;
 }
+
+/*.jumbotron .over {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0,0,0,1);
+    mix-blend-mode: hue;
+    transition: all 2.75s ease-in-out !important;
+    -moz-transition: all .65s ease-in-out;
+    -webkit-transition: all .65s ease-in-out;
+}*/
 
 .jumbotron .over {
     position: absolute;
@@ -285,22 +300,22 @@ JUMBOTRON
     right: 0;
     /* mix-blend-mode: darken; */
     z-index: 1;
-    background: rgba(0,0,0,1);
-    mix-blend-mode: hue;
+    background: rgba(0,0,0,.65);
+    /* mix-blend-mode: hue; */
     transition: all 2.75s ease-in-out !important;
     -moz-transition: all .65s ease-in-out;
     -webkit-transition: all .65s ease-in-out;
 }
 
 .jumbotron .over.fade{
-    background: 0,0,0,0;
+    /*background: 0,0,0,0;*/
 }
 
 .jumbotron .inner-wrap {
-    /* align-self: center; */
-    text-align: center;
+     text-align: center;
     width: 100%;
-    padding-top: 5.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .jumbotron .inner-wrap.vert-center {
