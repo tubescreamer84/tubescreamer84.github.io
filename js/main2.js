@@ -31,6 +31,7 @@ $(document).ready(function(){
 
     $('.mobile-button').click(function(){
         $('header').toggleClass('show');
+
     });
 
     $('.over').addClass('fade');
@@ -47,19 +48,27 @@ $(window).scroll(function(){
 
    parallax();
 
+   $('menu')
+   .on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+   function(e){
+    // do something here
+        // $('header').removeClass('show2');
+    });
+
 });
 
 
 function scrollMe(element){
-    console.log(element);
     if(element == 'home'){
         $('html, body').animate({
             scrollTop: 0
         }, 700);
+        $('header').removeClass('show');
     }else{
         $('html, body').animate({
             scrollTop: $('#'+ element).offset().top - $('header').outerHeight()
         }, 700);
+        $('header').removeClass('show');
     }
    
 

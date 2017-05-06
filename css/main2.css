@@ -553,6 +553,38 @@ input[type='email']:focus, input[type='number']:focus, input[type='password']:fo
         z-index: 101;
         margin-top: 2.25rem;
     }
+
+    .line{
+    transition: all .25s ease-in-out;
+    -moz-transition: all.25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    }
+
+    .line.two{
+          transition: all .05s ease-in-out;
+    -moz-transition: all.05s ease-in-out;
+    -webkit-transition: all .05s ease-in-out;
+    }
+
+    .show .line.one{
+            transform: rotate(45deg);
+    position: absolute;
+
+    }
+
+    .show .line.two{
+       opacity: 0;
+       position: absolute;
+    }
+
+    .show .line.three{
+        transform: rotate(-45deg);
+    }
+
+    .show .mobile-button{
+            margin-top: 3.5rem;
+    }
+
     .menu{
        transform: translate3d(0,-100%,0);
     position: fixed;
